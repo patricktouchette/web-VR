@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px;
+  overflow: hidden;
+}
+
+a-scene {
+  /* background: red; */
+}
+
+.controls {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+}
+
+/* #arjsDebugUIContainer {
+  display: none;
+} */
+
+/* TASK DETAILS */
+.task-detail {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+/* ARROWS */
+.arrow {
+  font-size: 200px;
+  color: green;
+  opacity: 0.7;
+  position: absolute;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em yellow;
+
+  top: 10vh;
+}
+
+.arrow-left {
+  display: none;
+  left: 10vw;
+}
+
+.arrow-right {
+  display: none;
+  right: 10vw;
+}
+
+.arrow.show {
+  display: block;
+}
+
+/* THUMBS UP */
+.found {
+  position: absolute;
+  font-size: 200px;
+  left: 45vw;
+  top: 5vh;
+  opacity: 0.6;
+  text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
+  display: none;
+}
+
+.found.show {
+  display: block;
+}
