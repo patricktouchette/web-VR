@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px;
+  overflow: hidden;
+}
+
+/* #arjsDebugUIContainer {
+  display: none;
+} */
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

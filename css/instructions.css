@@ -1,0 +1,47 @@
+.info {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  position: absolute;
+  top: 10px;
+  font-size: 1.5rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 3px;
+  display: none;
+}
+
+.info.show {
+  display: block;
+}
+
+/* POSITION INFO */
+.position {
+  left: 20px;
+  z-index: 11;
+}
+
+.position a {
+  cursor: pointer;
+}
+
+/* TASK DETAILS */
+.task-detail {
+  right: 20px;
+}
+
+/* INSTRUCTIONS */
+.instruction {
+  background: none;
+  font-size: 5rem;
+  opacity: 1;
+  left: 0;
+  width: 100%;
+  top: 5vh;
+  text-align: center;
+}
+
+.instruction-qty {
+  font-size: 10rem;
+  top: 40vh;
+}

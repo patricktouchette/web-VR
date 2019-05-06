@@ -1,0 +1,39 @@
+/* ARROWS */
+.arrow {
+  font-size: 200px;
+  color: green;
+  opacity: 0.9;
+  position: absolute;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em yellow;
+  z-index: 10;
+  top: 10vh;
+}
+
+.arrow-left {
+  display: none;
+  left: 10vw;
+}
+
+.arrow-right {
+  display: none;
+  right: 10vw;
+}
+
+.arrow.show {
+  display: block;
+}
+
+/* THUMBS UP */
+.thumbsup {
+  position: absolute;
+  font-size: 10rem;
+  left: 45vw;
+  top: 15vh;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
+  display: none;
+  z-index: 10;
+}
+.thumbsup.show {
+  display: block;
+}

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: grey;
+}
+
+.page {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(2in, 1fr));
+  grid-gap: 0;
+
+  background: white;
+  width: 8.5in;
+  height: 11in;
+  margin: 20px auto;
+}
+
+.page div {
+  text-align: center;
+  border: 0.2px dotted grey;
+}
+
+img {
+  width: 1.25in;
+  padding: 10px;
+}
+
+p {
+  padding-top: 10px;
+}
+
+/* MEDIA QUERIES */
+@media print {
+  html,
+  body,
+  .page {
+    margin: 0;
+    padding: 0;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0;
+  /* padding: 0; */
+}

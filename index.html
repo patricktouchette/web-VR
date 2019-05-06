@@ -2,37 +2,63 @@
 <html lang="en">
   <html>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fix for android zoom -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>VR</title>
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./lib/aframe.min.js"></script>
+    <script src="./lib/aframe-ar.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/controls.css" />
+    <link rel="stylesheet" href="./css/instructions.css" />
+    <link rel="stylesheet" href="./css/signs.css" />
+
     <body>
+      <!-- CONTROLS -->
       <div class="controls">
-        <button class="btn" id="trigger">Click Me</button>
+        <button class="" id="fullScreen">[ ]</button>
       </div>
 
-      <div class="task-detail">
-        <p>Location S-15-005-A-A</p>
+      <!-- UI -->
+      <div class="info position show">
+        <p>Position Actuelle</p>
+        <p>Rangée : 8</p>
+        <p>Loc : 10</p>
+        <a href="./markers/markers.html">Print Markers</a>
+      </div>
+
+      <div class="info task-detail show">
+        <p>Loc: S-09-005-A-A</p>
         <p>Sku: 123123DS</p>
         <p>Qte: 5x</p>
       </div>
 
+      <div class="info instruction show">Aller à la rangée 9</div>
+      <div class="info instruction instruction-qty ">5x</div>
+
+      <!-- DIRECTIONS -->
       <div class="arrow arrow-left">⬅</div>
       <div class="arrow arrow-right">➡</div>
-      <div class="found">👍</div>
+      <div class="thumbsup">👍</div>
 
+      <!-- <a-scene stats></a-scene> -->
       <a-scene
-        stats
         id="scene"
         embedded
-        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;  debugUIEnabled: false;"
+        vr-mode-ui="enabled: false"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;  debugUIEnabled: false; sourceType: webcam;"
       >
-        <!-- sourceType: webcam; -->
+        <!-- Markers are dynamically generated with JS -->
+        <a-entity camera></a-entity>
       </a-scene>
     </body>
 
-    <script src="./main.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </html>
 </html>
